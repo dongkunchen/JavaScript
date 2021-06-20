@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="nav">
+    <li>榴槤</li>
+    <li>臭豆腐</li>
+    <li>鯡魚罐頭</li>
+    <li>大豬蹄子</li>
+</ul>
+<script>
+    let lis = document.querySelector('.nav').querySelectorAll('li');
+    //現在不用閉包其實也能有效果
+    // for (let i = 0; i < lis.length;i++) {
+    //     setTimeout(function (){
+    //         console.log(lis[i].innerHTML);
+    //     },3000)
+    // }
+
+    for (let i = 0; i < lis.length; i++) {
+        (function (i) {
+            setTimeout(function () {
+                console.log(lis[i].innerHTML);
+            }, 3000)
+        })(i);
+    }
+</script>
+</body>
+</html>

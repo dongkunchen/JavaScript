@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.fun可以訪問fn的num
+    //2.fn就是closure
+    //3.closure典型高階函數
+    //4.延伸變量的作用範圍
+    function fn(){
+        let num = 10;
+        // function fun(){
+        //     console.log(num);
+        // }
+        // return fun;
+        return function (){
+            console.log(num);
+        }
+    }
+    let f = fn();
+    f();
+</script>
+</body>
+</html>

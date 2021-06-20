@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        li {
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+<textarea name="" id=""></textarea>
+<button>發布</button>
+<ul>
+
+</ul>
+<script>
+    //獲取元素
+    let btn = document.querySelector('button');
+    let text = document.querySelector('textarea');
+    let ul = document.querySelector('ul');
+    //註冊事件
+    btn.onclick = function (){
+       if(text.value == ''){
+           alert('您沒有輸入內容');
+           return false;
+       }else{
+           //創建元素
+           let li = document.createElement('li');
+           //先有li才能賦值
+           li.innerHTML = text.value;
+           //ul.appendChild(li);
+           ul.insertBefore(li,ul.children[0]);
+       }
+    }
+</script>
+</body>
+</html>

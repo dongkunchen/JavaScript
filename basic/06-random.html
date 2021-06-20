@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        console.log(Math.random());
+        //取兩個數之間的隨機整數並且包和2個整數
+        //Math.floor(Math.random()*(max-min+1))+min;
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(getRandom(1, 10));
+        //5.隨機點名
+        let arr = ['張三', '張三豐', '張三瘋子', '李四', '李思思']
+        console.log(arr[getRandom(0, arr.length - 1)])
+    </script>
+</head>
+<body>
+
+</body>
+</html>

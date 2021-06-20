@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+<div>123</div>
+<script>
+    //事件對象 使用event當形參可簡寫
+    // let div = document.querySelector('div');
+    // div.onclick = function (e){
+    //     console.log(e)
+    //     console.log(window.event)//ie678用
+    //     e=e||window.event;//解決兼容
+    //     console.log(e)
+    // }
+    //如果有鼠標事件 鍵盤事件所有數據都在event不一定要寫event也可寫其他
+    div.addEventListener('click',function (e){
+        console.log(e)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+手機號碼： <input type="number"> <button>發送</button>
+<script>
+    let btn = document.querySelector('button');
+    let time = 10;
+    btn.addEventListener('click',function (){
+        btn.disabled= true;
+        let timer = setInterval(function (){
+            if(time == 0){
+                clearInterval(timer);
+                btn.disabled= false;
+                btn.innerHTML ='發送';
+                time = 10;
+            }else {
+                btn.innerHTML ='還剩下'+time+'秒';
+                time--;
+            }
+        },1000)
+    })
+
+</script>
+</body>
+</html>
