@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .change {
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="first">文本</div>
+<script>
+    let test = document.querySelector('div');
+    test.onclick = function () {
+        //this.className = 'change';
+        //可以多類名
+        this.className = 'first change';
+
+    }
+</script>
+</body>
+</html>

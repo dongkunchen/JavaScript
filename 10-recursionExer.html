@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let data = [{
+        id: 1,
+        name: '家電',
+        goods: [{
+            id: 11,
+            gname: '冰箱',
+            goods:[{
+                id: 111,
+                gname: '夏普'
+            },{
+                id:112,
+                gname:'國際牌'
+            }]
+        }, {
+            id: 12,
+            gname: '洗衣機'
+        }]
+    }, {
+        id: 2,
+        name: '服飾'
+    }];
+    //輸入id返回數據對象
+    //1.利用forEach遍歷
+    function getID(json, id) {
+        let o = {};
+        json.forEach(function (item) {
+            if (item.id == id) {
+                o = item;
+                return item;
+            } else if (item.goods && item.goods.length > 0) {
+                o = getID(item.goods, id);
+            }
+
+        });
+        return o;
+    }
+
+
+    console.log(getID(data, 1));
+    console.log(getID(data, 2));
+    console.log(getID(data, 11));
+    console.log(getID(data, 12));
+    console.log(getID(data, 111));
+</script>
+</body>
+</html>

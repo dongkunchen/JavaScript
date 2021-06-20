@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/3.png" alt="">
+    <div>上午好</div>
+    <script>
+        let img = document.querySelector('img');
+        let div = document.querySelector('div');
+        let date = new Date();
+        let h = date.getHours();
+        if(h<12){
+            img.src = 'images/3.png';
+            div.innerHTML = '早上好!'
+        }else if (h<18){
+            img.src = 'images/4.png';
+            div.innerHTML = '下午好!'
+        }else{
+            img.src = 'images/5.png';
+            div.innerHTML = '晚上好!'
+        }
+
+    </script>
+</body>
+</html>

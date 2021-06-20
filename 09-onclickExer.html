@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="yamei1">美麗</button>
+    <button id="yamei2">氣質</button><br>
+    <img src="images/1.jpg" alt="" title="美麗">
+    <script>
+        let yamei1 = document.getElementById('yamei1')
+        let yamei2 = document.getElementById('yamei2')
+        var img = document.querySelector('img')
+        yamei2.onclick = function (){
+            img.src = 'images/2.jpg';
+            img.title = '氣質';
+        }
+        yamei1.onclick = function (){
+            img.src = 'images/1.jpg';
+            img.title = '美麗';
+        }
+    </script>
+
+</body>
+</html>

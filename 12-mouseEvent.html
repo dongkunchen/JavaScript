@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    document.addEventListener('click',function (e){
+        //可視區座標 滾動之後會有問題
+        console.log(e.clientX);
+        console.log(e.clientY);
+        //頁面文檔的座標
+        console.log(e.pageX);
+        console.log(e.pageY);
+        //螢幕位置座標
+        console.log(e.screenX);
+        console.log(e.screenY);
+    })
+</script>
+</body>
+</html>

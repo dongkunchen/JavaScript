@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let random = getRandom(1,10);
+        while (true){
+            let num = prompt('你來猜?輸入1~10之間的一個數字')
+            if(num > random){
+                alert('你猜大了');
+            }else if(num < random){
+                alert('你猜小了')
+            }else {
+                alert('你猜對了');
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

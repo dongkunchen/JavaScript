@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button>傳統註冊事件</button>
+<button>方法監聽註冊事件</button>
+<script>
+    let btns = document.querySelectorAll('button');
+    //傳統方法註冊事件
+    btns[0].onclick = function (){
+        alert('hi');
+    }
+    btns[0].onclick = function (){
+        alert('hello');
+    }
+    //事件監聽註冊事件(不帶on 字符串要加引號)
+    //同一個事件可以添加多個監聽
+    btns[1].addEventListener('click',function (){
+        alert(22);
+    })
+    btns[1].addEventListener('click',function (){
+        alert(33);
+    })
+</script>
+</body>
+</html>
